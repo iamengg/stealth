@@ -1,0 +1,53 @@
+I am campaigner
+1. 
+I will take input on topic 
+
+2.
+I will retrieve data about past present , text , video, 
+Predict future
+Career , 
+cases,
+
+I will rank that person
+
+3.
+i will create short story with image & text with possibility of audio
+Probably will create video kind of picture
+
+4. save data to db
+
+5. publish
+
+Microservices
+Monitoring stack
+    logging, grafana, prometheous, loki , opentelemetry
+
+K8s, docker 
+    deployment & scaling
+
+helm packaging
+
+Pros & cons of each 
+Counterpart of possible technologies
+
+Getting donation for project
+
+docker build -t your-username/user-service:your-image-tag user-service
+docker push your-username/user-service:your-image-tag
+
+# Repeat the above steps for order-service and payment-service
+
+kubectl apply -f user-service-deployment.yaml
+kubectl apply -f user-service-service.yaml
+
+# Repeat the above steps for order-service and payment-service YAMLs
+
+
+kubectl get pods
+kubectl get services
+
+Use Kubernetes Service DNS Names: Each Kubernetes Service gets its own DNS name. The format for accessing a service within the same namespace is <service-name>.<namespace>.svc.cluster.local. So, for example, if both user-service and order-service are in the same namespace, user-service can communicate with order-service using the DNS name order-service.<namespace>.svc.cluster.local.
+
+HTTP Requests: If your microservices communicate over HTTP, you can use the DNS name as the URL. For example, in your user-service code, when making an HTTP request to the order-service, you would use http://order-service.<namespace>.svc.cluster.local:<port>/endpoint.
+
+Environment Variables: You can also use environment variables to specify the URLs of other services dynamically. Kubernetes automatically injects environment variables containing the service names and ports for each service.

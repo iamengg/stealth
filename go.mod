@@ -1,3 +1,3 @@
-module github.com/iamengg/devops-made-easy/stealth
+module github.com/iamengg/stealth
 
 go 1.21.1

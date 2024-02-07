@@ -3,7 +3,7 @@ package userservice
 import (
 	"log"
 	"net/http"
-	"github.com/iamengg/devops-made-easy/stealth/userservice"
+	"github.com/iamengg/stealth/userservice"
 )
 
 func main() {

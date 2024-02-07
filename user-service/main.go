@@ -1,9 +1,9 @@
-package main
+package userservice
 
 import (
 	"log"
 	"net/http"
-	 "user-service/handler"
+	"github.com/iamengg/devops-made-easy/stealth/userservice"
 )
 
 func main() {

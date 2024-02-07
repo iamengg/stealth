@@ -1,4 +1,4 @@
-package main
+package userservice
 
 import (
 	"encoding/json"
@@ -20,12 +20,12 @@ func UserHandler(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
 
 	orderSvcUrl := os.Getenv("ORDER_SVC_URL")
-	if (orderSvcUrl == ""){
+	if orderSvcUrl == "" {
 		log.Printf("Error in getting orderSvcUrl %v", orderSvcUrl)
 		return
 	}
-	resp, err := http.Get(orderSvcUrl+"/orders")
-	if err != nil{
+	resp, err := http.Get(orderSvcUrl + "/orders")
+	if err != nil {
 		log.Printf(err.Error())
 		return
 	}

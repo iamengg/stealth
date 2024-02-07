@@ -51,3 +51,10 @@ Use Kubernetes Service DNS Names: Each Kubernetes Service gets its own DNS name.
 HTTP Requests: If your microservices communicate over HTTP, you can use the DNS name as the URL. For example, in your user-service code, when making an HTTP request to the order-service, you would use http://order-service.<namespace>.svc.cluster.local:<port>/endpoint.
 
 Environment Variables: You can also use environment variables to specify the URLs of other services dynamically. Kubernetes automatically injects environment variables containing the service names and ports for each service.
+
+integrate graphql, grpc
+monitoring
+ci/cd
+unit tests
+rest api documentations - 
+helm to packaging 

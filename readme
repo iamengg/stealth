@@ -58,3 +58,10 @@ ci/cd
 unit tests
 rest api documentations - 
 helm to packaging 
+
+
+//----------------To run userservice 
+os.Setenv("ORDER_SVC_URL", "http://localhost:8081")
+
+docker build user-service
+docker push user-service

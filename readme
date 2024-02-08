@@ -65,3 +65,24 @@ os.Setenv("ORDER_SVC_URL", "http://localhost:8081")
 
 docker build user-service
 docker push user-service
+
+docker build --progress=plain --no-cache .
+docker build --progress=plain --no-cache . -t user-service:latest
+
+//RUn k8s pods & make docker iamges availabel in minikube 
+https://stackoverflow.com/questions/42564058/how-can-i-use-local-docker-images-with-minikube
+docker build --progress=plain --no-cache . -t user-service:latest
+
+
+curl -X GET http://localhost:8080/users
+kubectl port-forward <pod_name> 8080:80
+
+then curl
+
+curl http://localhost:8080
+
+kubectl port-forward <pod_name> 8080:80
+
+then curl
+
+curl http://localhost:8080
